@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mastering Javascript</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Mastering JavaScript</h1>
+    <div class="butons">
+      <div class="butt">
+        <button id="button" class="button">Click Me</button>
+      </div>
+      <div class="butt">
+        <button id="hoverButton" class="hoverbutton">Hover around Me</button>
+      </div>
+      <div class="butt">
+        <button id="myButton">Double Click Me</button>
+      </div>
+      <div class="butt">
+        <button id="change">Click me to see magic!</button>
+        <br>
+        <p id="magic">This is magic!</p>
+      </div>
+    </div>
+
+    <p id="key-output">Press any key on your keyboard!</p>
+
+    <!-- Slideshow -->
+    <div class="slideshow-container">
+      <div class="slide">
+        <img src="images/ENC1.jpg" alt="Slide 1" />
+      </div>
+
+      <div class="slide">
+        <img src="images/ENC2.jpg" alt="Slide 2" />
+      </div>
+
+      <div class="slide">
+        <img src="images/ENC3.jpg" alt="Slide 3" />
+      </div>
+
+      <!-- Arrows -->
+      <a class="prev" onclick="changeSlide(-1)">❮</a>
+      <a class="next" onclick="changeSlide(1)">❯</a>
+    </div>
+
+    <!-- Dots -->
+    <div class="dots">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+    <!-- Accordion -->
+    <h2>Accordion Example</h2>
+
+    <button class="accordion">Section 1</button>
+    <div class="panel">
+      <p>Content for Section 1</p>
+    </div>
+
+    <button class="accordion">Section 2</button>
+    <div class="panel">
+      <p>Content for Section 2</p>
+    </div>
+
+    <button class="accordion">Section 3</button>
+    <div class="panel">
+      <p>Content for Section 3</p>
+    </div>
+
+    <!-- Form  -->
+    <h2>Form Validation</h2>
+
+    <form id="myForm" novalidate>
+      <label for="name">Name:</label><br />
+      <input type="text" id="name" placeholder="Enter your name" />
+      <div id="nameError" class="error">Name is required.</div>
+
+      <label for="email">Email:</label><br />
+      <input type="email" id="email" placeholder="Enter your email" />
+      <div id="emailError" class="error">
+        Please enter a valid email address.
+      </div>
+
+      <label for="password">Password:</label><br />
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter a password (min 8 characters)"
+      />
+      <div id="passwordError" class="error">
+        Password must be at least 8 characters.
+      </div>
+
+      <button type="submit">Submit</button>
+      <div id="formSuccess" class="success">
+        Form submitted successfully! 🎉
+      </div>
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>
